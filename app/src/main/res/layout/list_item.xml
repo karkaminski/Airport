@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/scheduled_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="18:25"
+        android:padding="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/estimated_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="18:33"
+        android:padding="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/airline_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="RYANAIR"
+        android:padding="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/arrival_code"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="NAP"
+        android:padding="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/flight_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="FR4045"
+        android:padding="5dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/event_status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Landed"
+        android:padding="5dp"
+        android:gravity="center"/>
+</LinearLayout>
