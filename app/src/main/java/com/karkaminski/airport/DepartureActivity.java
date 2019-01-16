@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class DepartureActivity extends AppCompatActivity {
@@ -17,21 +21,39 @@ public class DepartureActivity extends AppCompatActivity {
 
 
         ArrayList<Departure> departures = new ArrayList<Departure>();
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:02","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "LOT", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:03","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "LOT", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "WAW", "0987", "ABC"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "WAW", "0033", "Test"));
-        departures.add(new Departure("20:00","20:10", "Ryanair", "KRK", "0033", "Test"));
-        departures.add(new Departure("20:05","20:10", "LOT", "KRK", "0033", "Test"));
 
-        DepartureAdapter adapter = new DepartureAdapter(this,departures);
+
+        try {
+            //Whole JSON response is under in rootArrat object
+            JSONArray rootArray = new JSONArray(json);
+
+            for (int i = 0; i < 20; i++) {
+                JSONObject singleEvent = rootArray.getJSONObject(i);
+                //departureToAdd will be filled using setters and then added to ArrayList departures
+                Departure departureToAdd = new Departure();
+                departureToAdd.setEventStatus(singleEvent.getString("status"));
+
+                JSONObject departurelOfSingleEvent = singleEvent.getJSONObject("departure");
+                //departureToAdd.setScheduledTime(departurelOfSingleEvent.getString("scheduledTime"));
+                //departureToAdd.setEstimatedTime(departurelOfSingleEvent.getString("estimatedTime"));
+
+                JSONObject arrivalOfSingleEvent = singleEvent.getJSONObject("arrival");
+                departureToAdd.setArrivalCode(arrivalOfSingleEvent.getString("iataCode"));
+
+                JSONObject airlineOfSingleEvent = singleEvent.getJSONObject("airline");
+                departureToAdd.setAirlineName(airlineOfSingleEvent.getString("name"));
+
+                JSONObject flightOfSingleEvent = singleEvent.getJSONObject("flight");
+                departureToAdd.setFlightNumber(flightOfSingleEvent.getString("number"));
+                departures.add(departureToAdd);
+            }
+            //departures.add(new Departure("20:00", "20:10", "Ryanair", "KRK", "0033", singleEvent.getString("status")));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        DepartureAdapter adapter = new DepartureAdapter(this, departures);
         ListView listView = (ListView) findViewById(R.id.departures_list_view);
         listView.setAdapter(adapter);
     }

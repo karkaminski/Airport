@@ -18,6 +18,14 @@ public class Departure {
         this.flightNumber = flightNumber;
         this.eventStatus = eventStatus;
     }
+    public Departure(){
+        this.scheduledTime = "empty";
+        this.estimatedTime = "empty";
+        this.airlineName = "empty";
+        this.arrivalCode = "empty";
+        this.flightNumber = "empty";
+        this.eventStatus = "empty";
+    }
 
     public String getScheduledTime() {
         return scheduledTime;
