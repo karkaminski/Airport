@@ -3,16 +3,16 @@ package com.karkaminski.airport;
 public class Departure {
 
     private String scheduledTime;
-    private String estimatedTime;
+    private int delayInMinutes;
     private String airlineName;
     private String arrivalCode; //iataCode
     private String flightNumber; //iataNumber
     private String eventStatus;
 
 
-    public Departure(String scheduledTime, String estimatedTime, String airlineName, String arrivalCove, String flightNumber, String eventStatus) {
+    public Departure(String scheduledTime, int delayInMinutes, String airlineName, String arrivalCove, String flightNumber, String eventStatus) {
         this.scheduledTime = scheduledTime;
-        this.estimatedTime = estimatedTime;
+        this.delayInMinutes = delayInMinutes;
         this.airlineName = airlineName;
         this.arrivalCode = arrivalCove;
         this.flightNumber = flightNumber;
@@ -20,7 +20,7 @@ public class Departure {
     }
     public Departure(){
         this.scheduledTime = "empty";
-        this.estimatedTime = "empty";
+        this.delayInMinutes = 0;
         this.airlineName = "empty";
         this.arrivalCode = "empty";
         this.flightNumber = "empty";
@@ -35,12 +35,12 @@ public class Departure {
         this.scheduledTime = scheduledTime;
     }
 
-    public String getEstimatedTime() {
-        return estimatedTime;
+    public int getDelayInMinutes() {
+        return delayInMinutes;
     }
 
-    public void setEstimatedTime(String estimatedTime) {
-        this.estimatedTime = estimatedTime;
+    public void setDelayInMinutes(int estimatedTime) {
+        this.delayInMinutes = estimatedTime;
     }
 
     public String getAirlineName() {

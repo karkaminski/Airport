@@ -7,7 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class DepartureAdapter extends ArrayAdapter<Departure> {
 
@@ -35,8 +38,9 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
         TextView flightNumber = (TextView) listItemView.findViewById(R.id.flight_number);
         TextView eventStatus = (TextView) listItemView.findViewById(R.id.event_status);
 
-        scheduledTime.setText(currentDeparture.getScheduledTime());
-        estimatedTime.setText(currentDeparture.getEstimatedTime());
+        scheduledTime.setText(formatDate(currentDeparture.getScheduledTime()));
+
+        estimatedTime.setText(String.valueOf(currentDeparture.getDelayInMinutes()));
         airlineName.setText(currentDeparture.getAirlineName());
         arrivalCode.setText(currentDeparture.getArrivalCode());
         flightNumber.setText(currentDeparture.getFlightNumber());
@@ -44,5 +48,17 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
 
 
         return listItemView;
+    }
+    private String formatDate (String dateJson){
+        SimpleDateFormat inputTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+        SimpleDateFormat outputTime = new SimpleDateFormat("HH:mm");
+        try {
+            Date formattedDate = inputTime.parse(dateJson);
+            String outputDate = outputTime.format(formattedDate);
+            return outputDate;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return "exception";
+        }
     }
 }

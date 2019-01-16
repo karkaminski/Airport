@@ -17,7 +17,5676 @@ public class DepartureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_departure);
 
-        String json = "[  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G7\",    \"delay\": 4,    \"scheduledTime\": \"2019-01-15T12:10:00.000\",    \"estimatedTime\": \"2019-01-15T12:14:00.000\",    \"actualTime\": \"2019-01-15T12:14:00.000\",    \"estimatedRunway\": \"2019-01-15T12:24:00.000\",    \"actualRunway\": \"2019-01-15T12:24:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"2\",    \"delay\": 15,    \"scheduledTime\": \"2019-01-15T13:00:00.000\",    \"estimatedTime\": \"2019-01-15T13:15:00.000\",    \"actualTime\": \"2019-01-15T13:15:00.000\",    \"estimatedRunway\": \"2019-01-15T13:01:00.000\",    \"actualRunway\": \"2019-01-15T13:01:00.000\"   },   \"airline\": {    \"name\": \"TAP Portugal\",    \"iataCode\": \"TP\",    \"icaoCode\": \"TAP\"   },   \"flight\": {    \"number\": \"7076\",    \"iataNumber\": \"TP7076\",    \"icaoNumber\": \"TAP7076\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"LOT - Polish Airlines\",     \"iataCode\": \"LO\",     \"icaoCode\": \"LOT\"    },    \"flight\": {     \"number\": \"3908\",     \"iataNumber\": \"LO3908\",     \"icaoNumber\": \"LOT3908\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G7\",    \"delay\": 4,    \"scheduledTime\": \"2019-01-15T12:10:00.000\",    \"estimatedTime\": \"2019-01-15T12:14:00.000\",    \"actualTime\": \"2019-01-15T12:14:00.000\",    \"estimatedRunway\": \"2019-01-15T12:24:00.000\",    \"actualRunway\": \"2019-01-15T12:24:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"2\",    \"delay\": 15,    \"scheduledTime\": \"2019-01-15T13:00:00.000\",    \"estimatedTime\": \"2019-01-15T13:15:00.000\",    \"actualTime\": \"2019-01-15T13:15:00.000\",    \"estimatedRunway\": \"2019-01-15T13:01:00.000\",    \"actualRunway\": \"2019-01-15T13:01:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"3908\",    \"iataNumber\": \"LO3908\",    \"icaoNumber\": \"LOT3908\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G15\",    \"delay\": 41,    \"scheduledTime\": \"2019-01-15T12:05:00.000\",    \"estimatedTime\": \"2019-01-15T12:46:00.000\",    \"actualTime\": \"2019-01-15T12:46:00.000\",    \"estimatedRunway\": \"2019-01-15T13:00:00.000\",    \"actualRunway\": \"2019-01-15T13:00:00.000\"   },   \"arrival\": {    \"iataCode\": \"DXB\",    \"icaoCode\": \"OMDB\",    \"terminal\": \"3\",    \"baggage\": \"312\",    \"delay\": 38,    \"scheduledTime\": \"2019-01-15T20:40:00.000\",    \"estimatedTime\": \"2019-01-15T21:18:00.000\",    \"estimatedRunway\": \"2019-01-15T20:59:00.000\"   },   \"airline\": {    \"name\": \"Emirates\",    \"iataCode\": \"EK\",    \"icaoCode\": \"UAE\"   },   \"flight\": {    \"number\": \"2434\",    \"iataNumber\": \"EK2434\",    \"icaoNumber\": \"UAE2434\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"flydubai\",     \"iataCode\": \"FZ\",     \"icaoCode\": \"FDB\"    },    \"flight\": {     \"number\": \"1788\",     \"iataNumber\": \"FZ1788\",     \"icaoNumber\": \"FDB1788\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G15\",    \"delay\": 41,    \"scheduledTime\": \"2019-01-15T12:05:00.000\",    \"estimatedTime\": \"2019-01-15T12:46:00.000\",    \"actualTime\": \"2019-01-15T12:46:00.000\",    \"estimatedRunway\": \"2019-01-15T13:00:00.000\",    \"actualRunway\": \"2019-01-15T13:00:00.000\"   },   \"arrival\": {    \"iataCode\": \"DXB\",    \"icaoCode\": \"OMDB\",    \"terminal\": \"3\",    \"baggage\": \"312\",    \"delay\": 38,    \"scheduledTime\": \"2019-01-15T20:40:00.000\",    \"estimatedTime\": \"2019-01-15T21:18:00.000\",    \"estimatedRunway\": \"2019-01-15T20:59:00.000\"   },   \"airline\": {    \"name\": \"flydubai\",    \"iataCode\": \"FZ\",    \"icaoCode\": \"FDB\"   },   \"flight\": {    \"number\": \"1788\",    \"iataNumber\": \"FZ1788\",    \"icaoNumber\": \"FDB1788\"   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"Air Canada\",    \"iataCode\": \"AC\",    \"icaoCode\": \"ACA\"   },   \"flight\": {    \"number\": \"9553\",    \"iataNumber\": \"AC9553\",    \"icaoNumber\": \"ACA9553\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1367\",     \"iataNumber\": \"LH1367\",     \"icaoNumber\": \"DLH1367\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"5509\",    \"iataNumber\": \"LO5509\",    \"icaoNumber\": \"LOT5509\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1367\",     \"iataNumber\": \"LH1367\",     \"icaoNumber\": \"DLH1367\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"ANA\",    \"iataCode\": \"NH\",    \"icaoCode\": \"ANA\"   },   \"flight\": {    \"number\": \"5890\",    \"iataNumber\": \"NH5890\",    \"icaoNumber\": \"ANA5890\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1367\",     \"iataNumber\": \"LH1367\",     \"icaoNumber\": \"DLH1367\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"Brussels Airlines\",    \"iataCode\": \"SN\",    \"icaoCode\": \"BEL\"   },   \"flight\": {    \"number\": \"7118\",    \"iataNumber\": \"SN7118\",    \"icaoNumber\": \"BEL7118\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1367\",     \"iataNumber\": \"LH1367\",     \"icaoNumber\": \"DLH1367\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"United Airlines\",    \"iataCode\": \"UA\",    \"icaoCode\": \"UAL\"   },   \"flight\": {    \"number\": \"9396\",    \"iataNumber\": \"UA9396\",    \"icaoNumber\": \"UAL9396\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1367\",     \"iataNumber\": \"LH1367\",     \"icaoNumber\": \"DLH1367\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T12:55:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A25\",    \"scheduledTime\": \"2019-01-15T14:35:00.000\"   },   \"airline\": {    \"name\": \"Lufthansa\",    \"iataCode\": \"LH\",    \"icaoCode\": \"DLH\"   },   \"flight\": {    \"number\": \"1367\",    \"iataNumber\": \"LH1367\",    \"icaoNumber\": \"DLH1367\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G10\",    \"delay\": 46,    \"scheduledTime\": \"2019-01-15T12:20:00.000\",    \"estimatedTime\": \"2019-01-15T13:06:00.000\",    \"actualTime\": \"2019-01-15T13:06:00.000\",    \"estimatedRunway\": \"2019-01-15T13:13:00.000\",    \"actualRunway\": \"2019-01-15T13:13:00.000\"   },   \"arrival\": {    \"iataCode\": \"BGY\",    \"icaoCode\": \"LIME\",    \"delay\": 30,    \"scheduledTime\": \"2019-01-15T14:10:00.000\",    \"estimatedTime\": \"2019-01-15T14:40:00.000\",    \"actualTime\": \"2019-01-15T14:40:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"6877\",    \"iataNumber\": \"FR6877\",    \"icaoNumber\": \"RYR6877\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Ryanair Sun\",     \"iataCode\": \"RR*\"    },    \"flight\": {     \"number\": \"6877\",     \"iataNumber\": \"RR*6877\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G10\",    \"delay\": 46,    \"scheduledTime\": \"2019-01-15T12:20:00.000\",    \"estimatedTime\": \"2019-01-15T13:06:00.000\",    \"actualTime\": \"2019-01-15T13:06:00.000\",    \"estimatedRunway\": \"2019-01-15T13:13:00.000\",    \"actualRunway\": \"2019-01-15T13:13:00.000\"   },   \"arrival\": {    \"iataCode\": \"BGY\",    \"icaoCode\": \"LIME\",    \"delay\": 30,    \"scheduledTime\": \"2019-01-15T14:10:00.000\",    \"estimatedTime\": \"2019-01-15T14:40:00.000\",    \"actualTime\": \"2019-01-15T14:40:00.000\"   },   \"airline\": {    \"name\": \"Ryanair Sun\",    \"iataCode\": \"RR*\"   },   \"flight\": {    \"number\": \"6877\",    \"iataNumber\": \"RR*6877\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G2\",    \"delay\": 19,    \"scheduledTime\": \"2019-01-15T12:50:00.000\",    \"estimatedTime\": \"2019-01-15T13:09:00.000\",    \"actualTime\": \"2019-01-15T13:09:00.000\",    \"estimatedRunway\": \"2019-01-15T13:16:00.000\",    \"actualRunway\": \"2019-01-15T13:16:00.000\"   },   \"arrival\": {    \"iataCode\": \"ARN\",    \"icaoCode\": \"ESSA\",    \"terminal\": \"5\",    \"gate\": \"11\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T14:45:00.000\",    \"estimatedTime\": \"2019-01-15T15:10:00.000\",    \"actualTime\": \"2019-01-15T15:10:00.000\",    \"estimatedRunway\": \"2019-01-15T15:06:00.000\",    \"actualRunway\": \"2019-01-15T15:06:00.000\"   },   \"airline\": {    \"name\": \"Norwegian Air Shuttle\",    \"iataCode\": \"DY\",    \"icaoCode\": \"NAX\"   },   \"flight\": {    \"number\": \"4902\",    \"iataNumber\": \"DY4902\",    \"icaoNumber\": \"NAX4902\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G1\",    \"delay\": 38,    \"scheduledTime\": \"2019-01-15T12:35:00.000\",    \"estimatedTime\": \"2019-01-15T13:13:00.000\",    \"actualTime\": \"2019-01-15T13:13:00.000\",    \"estimatedRunway\": \"2019-01-15T13:26:00.000\",    \"actualRunway\": \"2019-01-15T13:26:00.000\"   },   \"arrival\": {    \"iataCode\": \"OSL\",    \"icaoCode\": \"ENGM\",    \"baggage\": \"6\",    \"delay\": 76,    \"scheduledTime\": \"2019-01-15T14:40:00.000\",    \"estimatedTime\": \"2019-01-15T15:56:00.000\",    \"actualTime\": \"2019-01-15T15:56:00.000\",    \"estimatedRunway\": \"2019-01-15T15:50:00.000\",    \"actualRunway\": \"2019-01-15T15:50:00.000\"   },   \"airline\": {    \"name\": \"Norwegian Air Shuttle\",    \"iataCode\": \"DY\",    \"icaoCode\": \"NAX\"   },   \"flight\": {    \"number\": \"1041\",    \"iataNumber\": \"DY1041\",    \"icaoNumber\": \"NAX1041\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G18\",    \"delay\": 59,    \"scheduledTime\": \"2019-01-15T12:55:00.000\",    \"estimatedTime\": \"2019-01-15T13:54:00.000\",    \"actualTime\": \"2019-01-15T13:54:00.000\",    \"estimatedRunway\": \"2019-01-15T14:10:00.000\",    \"actualRunway\": \"2019-01-15T14:10:00.000\"   },   \"arrival\": {    \"iataCode\": \"LGW\",    \"icaoCode\": \"EGKK\",    \"terminal\": \"N\",    \"delay\": 61,    \"scheduledTime\": \"2019-01-15T14:30:00.000\",    \"estimatedTime\": \"2019-01-15T15:31:00.000\",    \"actualTime\": \"2019-01-15T15:31:00.000\",    \"estimatedRunway\": \"2019-01-15T15:22:00.000\",    \"actualRunway\": \"2019-01-15T15:22:00.000\"   },   \"airline\": {    \"name\": \"easyJet\",    \"iataCode\": \"U2\",    \"icaoCode\": \"EZY\"   },   \"flight\": {    \"number\": \"8512\",    \"iataNumber\": \"U28512\",    \"icaoNumber\": \"EZY8512\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"006\",    \"delay\": 27,    \"scheduledTime\": \"2019-01-15T13:30:00.000\",    \"estimatedTime\": \"2019-01-15T13:57:00.000\",    \"actualTime\": \"2019-01-15T13:57:00.000\",    \"estimatedRunway\": \"2019-01-15T14:08:00.000\",    \"actualRunway\": \"2019-01-15T14:08:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"G40\",    \"delay\": 19,    \"scheduledTime\": \"2019-01-15T14:50:00.000\",    \"estimatedTime\": \"2019-01-15T15:09:00.000\",    \"actualTime\": \"2019-01-15T15:09:00.000\",    \"estimatedRunway\": \"2019-01-15T15:03:00.000\",    \"actualRunway\": \"2019-01-15T15:03:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"5381\",    \"iataNumber\": \"LO5381\",    \"icaoNumber\": \"LOT5381\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1623\",     \"iataNumber\": \"LH1623\",     \"icaoNumber\": \"DLH1623\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"006\",    \"delay\": 27,    \"scheduledTime\": \"2019-01-15T13:30:00.000\",    \"estimatedTime\": \"2019-01-15T13:57:00.000\",    \"actualTime\": \"2019-01-15T13:57:00.000\",    \"estimatedRunway\": \"2019-01-15T14:08:00.000\",    \"actualRunway\": \"2019-01-15T14:08:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"G40\",    \"delay\": 19,    \"scheduledTime\": \"2019-01-15T14:50:00.000\",    \"estimatedTime\": \"2019-01-15T15:09:00.000\",    \"actualTime\": \"2019-01-15T15:09:00.000\",    \"estimatedRunway\": \"2019-01-15T15:03:00.000\",    \"actualRunway\": \"2019-01-15T15:03:00.000\"   },   \"airline\": {    \"name\": \"Brussels Airlines\",    \"iataCode\": \"SN\",    \"icaoCode\": \"BEL\"   },   \"flight\": {    \"number\": \"7134\",    \"iataNumber\": \"SN7134\",    \"icaoNumber\": \"BEL7134\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1623\",     \"iataNumber\": \"LH1623\",     \"icaoNumber\": \"DLH1623\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"006\",    \"delay\": 27,    \"scheduledTime\": \"2019-01-15T13:30:00.000\",    \"estimatedTime\": \"2019-01-15T13:57:00.000\",    \"actualTime\": \"2019-01-15T13:57:00.000\",    \"estimatedRunway\": \"2019-01-15T14:08:00.000\",    \"actualRunway\": \"2019-01-15T14:08:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"G40\",    \"delay\": 19,    \"scheduledTime\": \"2019-01-15T14:50:00.000\",    \"estimatedTime\": \"2019-01-15T15:09:00.000\",    \"actualTime\": \"2019-01-15T15:09:00.000\",    \"estimatedRunway\": \"2019-01-15T15:03:00.000\",    \"actualRunway\": \"2019-01-15T15:03:00.000\"   },   \"airline\": {    \"name\": \"United Airlines\",    \"iataCode\": \"UA\",    \"icaoCode\": \"UAL\"   },   \"flight\": {    \"number\": \"9403\",    \"iataNumber\": \"UA9403\",    \"icaoNumber\": \"UAL9403\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1623\",     \"iataNumber\": \"LH1623\",     \"icaoNumber\": \"DLH1623\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"006\",    \"delay\": 27,    \"scheduledTime\": \"2019-01-15T13:30:00.000\",    \"estimatedTime\": \"2019-01-15T13:57:00.000\",    \"actualTime\": \"2019-01-15T13:57:00.000\",    \"estimatedRunway\": \"2019-01-15T14:08:00.000\",    \"actualRunway\": \"2019-01-15T14:08:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"G40\",    \"delay\": 19,    \"scheduledTime\": \"2019-01-15T14:50:00.000\",    \"estimatedTime\": \"2019-01-15T15:09:00.000\",    \"actualTime\": \"2019-01-15T15:09:00.000\",    \"estimatedRunway\": \"2019-01-15T15:03:00.000\",    \"actualRunway\": \"2019-01-15T15:03:00.000\"   },   \"airline\": {    \"name\": \"Lufthansa\",    \"iataCode\": \"LH\",    \"icaoCode\": \"DLH\"   },   \"flight\": {    \"number\": \"1623\",    \"iataNumber\": \"LH1623\",    \"icaoNumber\": \"DLH1623\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G15\",    \"delay\": 35,    \"scheduledTime\": \"2019-01-15T13:25:00.000\",    \"estimatedTime\": \"2019-01-15T14:00:00.000\",    \"actualTime\": \"2019-01-15T14:00:00.000\",    \"estimatedRunway\": \"2019-01-15T14:13:00.000\",    \"actualRunway\": \"2019-01-15T14:13:00.000\"   },   \"arrival\": {    \"iataCode\": \"LBA\",    \"icaoCode\": \"EGNM\",    \"delay\": 35,    \"scheduledTime\": \"2019-01-15T15:05:00.000\",    \"estimatedTime\": \"2019-01-15T15:40:00.000\",    \"actualTime\": \"2019-01-15T15:40:00.000\",    \"estimatedRunway\": \"2019-01-15T15:35:00.000\",    \"actualRunway\": \"2019-01-15T15:35:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"2333\",    \"iataNumber\": \"FR2333\",    \"icaoNumber\": \"RYR2333\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G9\",    \"delay\": 75,    \"scheduledTime\": \"2019-01-15T12:50:00.000\",    \"estimatedTime\": \"2019-01-15T14:05:00.000\",    \"actualTime\": \"2019-01-15T14:05:00.000\",    \"estimatedRunway\": \"2019-01-15T14:19:00.000\",    \"actualRunway\": \"2019-01-15T14:19:00.000\"   },   \"arrival\": {    \"iataCode\": \"CAG\",    \"icaoCode\": \"LIEE\",    \"delay\": 65,    \"scheduledTime\": \"2019-01-15T15:10:00.000\",    \"estimatedTime\": \"2019-01-15T16:15:00.000\",    \"actualTime\": \"2019-01-15T16:15:00.000\",    \"estimatedRunway\": \"2019-01-15T16:15:00.000\",    \"actualRunway\": \"2019-01-15T16:15:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"7305\",    \"iataNumber\": \"FR7305\",    \"icaoNumber\": \"RYR7305\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G4\",    \"delay\": 58,    \"scheduledTime\": \"2019-01-15T13:15:00.000\",    \"estimatedTime\": \"2019-01-15T14:13:00.000\",    \"actualTime\": \"2019-01-15T14:13:00.000\",    \"estimatedRunway\": \"2019-01-15T14:27:00.000\",    \"actualRunway\": \"2019-01-15T14:27:00.000\"   },   \"arrival\": {    \"iataCode\": \"TRD\",    \"icaoCode\": \"ENVA\",    \"baggage\": \"4\",    \"delay\": 91,    \"scheduledTime\": \"2019-01-15T15:40:00.000\",    \"estimatedTime\": \"2019-01-15T17:11:00.000\",    \"actualTime\": \"2019-01-15T17:11:00.000\",    \"estimatedRunway\": \"2019-01-15T17:06:00.000\",    \"actualRunway\": \"2019-01-15T17:06:00.000\"   },   \"airline\": {    \"name\": \"Norwegian Air Shuttle\",    \"iataCode\": \"DY\",    \"icaoCode\": \"NAX\"   },   \"flight\": {    \"number\": \"1039\",    \"iataNumber\": \"DY1039\",    \"icaoNumber\": \"NAX1039\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G4\",    \"delay\": 28,    \"scheduledTime\": \"2019-01-15T14:15:00.000\",    \"estimatedTime\": \"2019-01-15T14:43:00.000\",    \"actualTime\": \"2019-01-15T14:43:00.000\",    \"estimatedRunway\": \"2019-01-15T14:47:00.000\",    \"actualRunway\": \"2019-01-15T14:47:00.000\"   },   \"arrival\": {    \"iataCode\": \"DUS\",    \"icaoCode\": \"EDDL\",    \"gate\": \"B33\",    \"delay\": 21,    \"scheduledTime\": \"2019-01-15T16:00:00.000\",    \"estimatedTime\": \"2019-01-15T16:21:00.000\",    \"actualTime\": \"2019-01-15T16:21:00.000\",    \"estimatedRunway\": \"2019-01-15T16:18:00.000\",    \"actualRunway\": \"2019-01-15T16:18:00.000\"   },   \"airline\": {    \"name\": \"Eurowings\",    \"iataCode\": \"EW\",    \"icaoCode\": \"EWG\"   },   \"flight\": {    \"number\": \"9733\",    \"iataNumber\": \"EW9733\",    \"icaoNumber\": \"EWG9733\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G17\",    \"delay\": 14,    \"scheduledTime\": \"2019-01-15T14:35:00.000\",    \"estimatedTime\": \"2019-01-15T14:49:00.000\",    \"actualTime\": \"2019-01-15T14:49:00.000\",    \"estimatedRunway\": \"2019-01-15T15:02:00.000\",    \"actualRunway\": \"2019-01-15T15:02:00.000\"   },   \"arrival\": {    \"iataCode\": \"LHR\",    \"icaoCode\": \"EGLL\",    \"terminal\": \"5\",    \"baggage\": \"7\",    \"delay\": 8,    \"scheduledTime\": \"2019-01-15T16:10:00.000\",    \"estimatedTime\": \"2019-01-15T16:18:00.000\",    \"actualTime\": \"2019-01-15T16:18:00.000\",    \"estimatedRunway\": \"2019-01-15T16:10:00.000\",    \"actualRunway\": \"2019-01-15T16:10:00.000\"   },   \"airline\": {    \"name\": \"British Airways\",    \"iataCode\": \"BA\",    \"icaoCode\": \"BAW\"   },   \"flight\": {    \"number\": \"873\",    \"iataNumber\": \"BA873\",    \"icaoNumber\": \"BAW873\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G1\",    \"delay\": 115,    \"scheduledTime\": \"2019-01-15T13:20:00.000\",    \"estimatedTime\": \"2019-01-15T15:15:00.000\",    \"actualTime\": \"2019-01-15T15:15:00.000\",    \"estimatedRunway\": \"2019-01-15T15:20:00.000\",    \"actualRunway\": \"2019-01-15T15:20:00.000\"   },   \"arrival\": {    \"iataCode\": \"BGO\",    \"icaoCode\": \"ENBR\",    \"baggage\": \"2\",    \"delay\": 135,    \"scheduledTime\": \"2019-01-15T15:40:00.000\",    \"estimatedTime\": \"2019-01-15T17:55:00.000\",    \"estimatedRunway\": \"2019-01-15T17:55:00.000\"   },   \"airline\": {    \"name\": \"Norwegian Air Shuttle\",    \"iataCode\": \"DY\",    \"icaoCode\": \"NAX\"   },   \"flight\": {    \"number\": \"1029\",    \"iataNumber\": \"DY1029\",    \"icaoNumber\": \"NAX1029\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G7\",    \"delay\": 10,    \"scheduledTime\": \"2019-01-15T15:05:00.000\",    \"estimatedTime\": \"2019-01-15T15:15:00.000\",    \"actualTime\": \"2019-01-15T15:15:00.000\",    \"estimatedRunway\": \"2019-01-15T15:53:00.000\",    \"actualRunway\": \"2019-01-15T15:53:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"5\",    \"delay\": 35,    \"scheduledTime\": \"2019-01-15T15:55:00.000\",    \"estimatedTime\": \"2019-01-15T16:30:00.000\",    \"actualTime\": \"2019-01-15T16:30:00.000\",    \"estimatedRunway\": \"2019-01-15T16:24:00.000\",    \"actualRunway\": \"2019-01-15T16:24:00.000\"   },   \"airline\": {    \"name\": \"Aeroflot\",    \"iataCode\": \"SU\",    \"icaoCode\": \"AFL\"   },   \"flight\": {    \"number\": \"3708\",    \"iataNumber\": \"SU3708\",    \"icaoNumber\": \"AFL3708\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"LOT - Polish Airlines\",     \"iataCode\": \"LO\",     \"icaoCode\": \"LOT\"    },    \"flight\": {     \"number\": \"3906\",     \"iataNumber\": \"LO3906\",     \"icaoNumber\": \"LOT3906\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G7\",    \"delay\": 10,    \"scheduledTime\": \"2019-01-15T15:05:00.000\",    \"estimatedTime\": \"2019-01-15T15:15:00.000\",    \"actualTime\": \"2019-01-15T15:15:00.000\",    \"estimatedRunway\": \"2019-01-15T15:53:00.000\",    \"actualRunway\": \"2019-01-15T15:53:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"5\",    \"delay\": 35,    \"scheduledTime\": \"2019-01-15T15:55:00.000\",    \"estimatedTime\": \"2019-01-15T16:30:00.000\",    \"actualTime\": \"2019-01-15T16:30:00.000\",    \"estimatedRunway\": \"2019-01-15T16:24:00.000\",    \"actualRunway\": \"2019-01-15T16:24:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"3906\",    \"iataNumber\": \"LO3906\",    \"icaoNumber\": \"LOT3906\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G10\",    \"delay\": 73,    \"scheduledTime\": \"2019-01-15T14:05:00.000\",    \"estimatedTime\": \"2019-01-15T15:18:00.000\",    \"estimatedRunway\": \"2019-01-15T15:33:00.000\",    \"actualRunway\": \"2019-01-15T15:33:00.000\"   },   \"arrival\": {    \"iataCode\": \"CIA\",    \"icaoCode\": \"LIRA\",    \"baggage\": \"2\",    \"delay\": 62,    \"scheduledTime\": \"2019-01-15T16:05:00.000\",    \"estimatedTime\": \"2019-01-15T17:07:00.000\",    \"actualTime\": \"2019-01-15T17:07:00.000\",    \"estimatedRunway\": \"2019-01-15T16:58:00.000\",    \"actualRunway\": \"2019-01-15T16:58:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"9663\",    \"iataNumber\": \"FR9663\",    \"icaoNumber\": \"RYR9663\"   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"005\",    \"delay\": 14,    \"scheduledTime\": \"2019-01-15T15:15:00.000\",    \"estimatedTime\": \"2019-01-15T15:29:00.000\",    \"actualTime\": \"2019-01-15T15:29:00.000\",    \"estimatedRunway\": \"2019-01-15T15:35:00.000\",    \"actualRunway\": \"2019-01-15T15:35:00.000\"   },   \"arrival\": {    \"iataCode\": \"VIE\",    \"icaoCode\": \"LOWW\",    \"baggage\": \"04\",    \"delay\": 6,    \"scheduledTime\": \"2019-01-15T16:20:00.000\",    \"estimatedTime\": \"2019-01-15T16:26:00.000\",    \"actualTime\": \"2019-01-15T16:26:00.000\",    \"estimatedRunway\": \"2019-01-15T16:22:00.000\",    \"actualRunway\": \"2019-01-15T16:22:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"5229\",    \"iataNumber\": \"LO5229\",    \"icaoNumber\": \"LOT5229\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Austrian\",     \"iataCode\": \"OS\",     \"icaoCode\": \"AUA\"    },    \"flight\": {     \"number\": \"598\",     \"iataNumber\": \"OS598\",     \"icaoNumber\": \"AUA598\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"landed\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"005\",    \"delay\": 14,    \"scheduledTime\": \"2019-01-15T15:15:00.000\",    \"estimatedTime\": \"2019-01-15T15:29:00.000\",    \"actualTime\": \"2019-01-15T15:29:00.000\",    \"estimatedRunway\": \"2019-01-15T15:35:00.000\",    \"actualRunway\": \"2019-01-15T15:35:00.000\"   },   \"arrival\": {    \"iataCode\": \"VIE\",    \"icaoCode\": \"LOWW\",    \"baggage\": \"04\",    \"delay\": 6,    \"scheduledTime\": \"2019-01-15T16:20:00.000\",    \"estimatedTime\": \"2019-01-15T16:26:00.000\",    \"actualTime\": \"2019-01-15T16:26:00.000\",    \"estimatedRunway\": \"2019-01-15T16:22:00.000\",    \"actualRunway\": \"2019-01-15T16:22:00.000\"   },   \"airline\": {    \"name\": \"Austrian\",    \"iataCode\": \"OS\",    \"icaoCode\": \"AUA\"   },   \"flight\": {    \"number\": \"598\",    \"iataNumber\": \"OS598\",    \"icaoNumber\": \"AUA598\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G13\",    \"delay\": 24,    \"scheduledTime\": \"2019-01-15T15:10:00.000\",    \"estimatedTime\": \"2019-01-15T15:34:00.000\",    \"estimatedRunway\": \"2019-01-15T15:44:00.000\",    \"actualRunway\": \"2019-01-15T15:44:00.000\"   },   \"arrival\": {    \"iataCode\": \"TLV\",    \"icaoCode\": \"LLBG\",    \"scheduledTime\": \"2019-01-15T19:50:00.000\",    \"estimatedTime\": \"2019-01-15T19:44:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"4083\",    \"iataNumber\": \"FR4083\",    \"icaoNumber\": \"RYR4083\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Ryanair Sun\",     \"iataCode\": \"RR*\"    },    \"flight\": {     \"number\": \"4083\",     \"iataNumber\": \"RR*4083\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G13\",    \"delay\": 24,    \"scheduledTime\": \"2019-01-15T15:10:00.000\",    \"estimatedTime\": \"2019-01-15T15:34:00.000\",    \"estimatedRunway\": \"2019-01-15T15:44:00.000\",    \"actualRunway\": \"2019-01-15T15:44:00.000\"   },   \"arrival\": {    \"iataCode\": \"TLV\",    \"icaoCode\": \"LLBG\",    \"scheduledTime\": \"2019-01-15T19:50:00.000\",    \"estimatedTime\": \"2019-01-15T19:44:00.000\"   },   \"airline\": {    \"name\": \"Ryanair Sun\",    \"iataCode\": \"RR*\"   },   \"flight\": {    \"number\": \"4083\",    \"iataNumber\": \"RR*4083\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G15\",    \"delay\": 31,    \"scheduledTime\": \"2019-01-15T15:10:00.000\",    \"estimatedTime\": \"2019-01-15T15:41:00.000\",    \"actualTime\": \"2019-01-15T15:41:00.000\",    \"estimatedRunway\": \"2019-01-15T15:51:00.000\",    \"actualRunway\": \"2019-01-15T15:51:00.000\"   },   \"arrival\": {    \"iataCode\": \"MAN\",    \"icaoCode\": \"EGCC\",    \"terminal\": \"1\",    \"delay\": 31,    \"scheduledTime\": \"2019-01-15T16:55:00.000\",    \"estimatedTime\": \"2019-01-15T17:26:00.000\",    \"estimatedRunway\": \"2019-01-15T17:20:00.000\"   },   \"airline\": {    \"name\": \"easyJet\",    \"iataCode\": \"U2\",    \"icaoCode\": \"EZY\"   },   \"flight\": {    \"number\": \"1872\",    \"iataNumber\": \"U21872\",    \"icaoNumber\": \"EZY1872\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G18\",    \"delay\": 21,    \"scheduledTime\": \"2019-01-15T15:35:00.000\",    \"estimatedTime\": \"2019-01-15T15:56:00.000\",    \"estimatedRunway\": \"2019-01-15T16:10:00.000\",    \"actualRunway\": \"2019-01-15T16:10:00.000\"   },   \"arrival\": {    \"iataCode\": \"DUB\",    \"icaoCode\": \"EIDW\",    \"terminal\": \"1\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T17:40:00.000\",    \"estimatedTime\": \"2019-01-15T18:00:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"1902\",    \"iataNumber\": \"FR1902\",    \"icaoNumber\": \"RYR1902\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Ryanair Sun\",     \"iataCode\": \"RR*\"    },    \"flight\": {     \"number\": \"1902\",     \"iataNumber\": \"RR*1902\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G18\",    \"delay\": 21,    \"scheduledTime\": \"2019-01-15T15:35:00.000\",    \"estimatedTime\": \"2019-01-15T15:56:00.000\",    \"estimatedRunway\": \"2019-01-15T16:10:00.000\",    \"actualRunway\": \"2019-01-15T16:10:00.000\"   },   \"arrival\": {    \"iataCode\": \"DUB\",    \"icaoCode\": \"EIDW\",    \"terminal\": \"1\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T17:40:00.000\",    \"estimatedTime\": \"2019-01-15T18:00:00.000\"   },   \"airline\": {    \"name\": \"Ryanair Sun\",    \"iataCode\": \"RR*\"   },   \"flight\": {    \"number\": \"1902\",    \"iataNumber\": \"RR*1902\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G1\",    \"scheduledTime\": \"2019-01-15T16:35:00.000\",    \"estimatedTime\": \"2019-01-15T16:35:00.000\",    \"actualTime\": \"2019-01-15T16:35:00.000\",    \"estimatedRunway\": \"2019-01-15T16:45:00.000\",    \"actualRunway\": \"2019-01-15T16:45:00.000\"   },   \"arrival\": {    \"iataCode\": \"AMS\",    \"icaoCode\": \"EHAM\",    \"terminal\": \"2\",    \"gate\": \"C9\",    \"baggage\": \"010\",    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T18:33:00.000\",    \"estimatedRunway\": \"2019-01-15T18:26:00.000\"   },   \"airline\": {    \"name\": \"Air France\",    \"iataCode\": \"AF\",    \"icaoCode\": \"AFR\"   },   \"flight\": {    \"number\": \"8288\",    \"iataNumber\": \"AF8288\",    \"icaoNumber\": \"AFR8288\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"KLM\",     \"iataCode\": \"KL\",     \"icaoCode\": \"KLM\"    },    \"flight\": {     \"number\": \"1996\",     \"iataNumber\": \"KL1996\",     \"icaoNumber\": \"KLM1996\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G1\",    \"scheduledTime\": \"2019-01-15T16:35:00.000\",    \"estimatedTime\": \"2019-01-15T16:35:00.000\",    \"actualTime\": \"2019-01-15T16:35:00.000\",    \"estimatedRunway\": \"2019-01-15T16:45:00.000\",    \"actualRunway\": \"2019-01-15T16:45:00.000\"   },   \"arrival\": {    \"iataCode\": \"AMS\",    \"icaoCode\": \"EHAM\",    \"terminal\": \"2\",    \"gate\": \"C9\",    \"baggage\": \"010\",    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T18:33:00.000\",    \"estimatedRunway\": \"2019-01-15T18:26:00.000\"   },   \"airline\": {    \"name\": \"KLM\",    \"iataCode\": \"KL\",    \"icaoCode\": \"KLM\"   },   \"flight\": {    \"number\": \"1996\",    \"iataNumber\": \"KL1996\",    \"icaoNumber\": \"KLM1996\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G3\",    \"delay\": 17,    \"scheduledTime\": \"2019-01-15T16:20:00.000\",    \"estimatedTime\": \"2019-01-15T16:37:00.000\",    \"estimatedRunway\": \"2019-01-15T16:51:00.000\",    \"actualRunway\": \"2019-01-15T16:51:00.000\"   },   \"arrival\": {    \"iataCode\": \"AGP\",    \"icaoCode\": \"LEMG\",    \"baggage\": \"37\",    \"delay\": 6,    \"scheduledTime\": \"2019-01-15T20:05:00.000\",    \"estimatedTime\": \"2019-01-15T20:11:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"2589\",    \"iataNumber\": \"FR2589\",    \"icaoNumber\": \"RYR2589\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Ryanair Sun\",     \"iataCode\": \"RR*\"    },    \"flight\": {     \"number\": \"2589\",     \"iataNumber\": \"RR*2589\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G3\",    \"delay\": 17,    \"scheduledTime\": \"2019-01-15T16:20:00.000\",    \"estimatedTime\": \"2019-01-15T16:37:00.000\",    \"estimatedRunway\": \"2019-01-15T16:51:00.000\",    \"actualRunway\": \"2019-01-15T16:51:00.000\"   },   \"arrival\": {    \"iataCode\": \"AGP\",    \"icaoCode\": \"LEMG\",    \"baggage\": \"37\",    \"delay\": 6,    \"scheduledTime\": \"2019-01-15T20:05:00.000\",    \"estimatedTime\": \"2019-01-15T20:11:00.000\"   },   \"airline\": {    \"name\": \"Ryanair Sun\",    \"iataCode\": \"RR*\"   },   \"flight\": {    \"number\": \"2589\",    \"iataNumber\": \"RR*2589\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G9\",    \"delay\": 173,    \"scheduledTime\": \"2019-01-15T13:55:00.000\",    \"estimatedTime\": \"2019-01-15T16:48:00.000\",    \"estimatedRunway\": \"2019-01-15T16:59:00.000\",    \"actualRunway\": \"2019-01-15T16:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"GRO\",    \"icaoCode\": \"LEGE\",    \"terminal\": \"1\",    \"baggage\": \"3\",    \"delay\": 155,    \"scheduledTime\": \"2019-01-15T16:35:00.000\",    \"estimatedTime\": \"2019-01-15T19:10:00.000\",    \"estimatedRunway\": \"2019-01-15T18:55:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"2202\",    \"iataNumber\": \"FR2202\",    \"icaoNumber\": \"RYR2202\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G13\",    \"scheduledTime\": \"2019-01-15T17:25:00.000\",    \"estimatedTime\": \"2019-01-15T17:25:00.000\",    \"estimatedRunway\": \"2019-01-15T17:51:00.000\",    \"actualRunway\": \"2019-01-15T17:51:00.000\"   },   \"arrival\": {    \"iataCode\": \"BFS\",    \"icaoCode\": \"EGAA\",    \"scheduledTime\": \"2019-01-15T19:25:00.000\",    \"estimatedTime\": \"2019-01-15T19:25:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"1117\",    \"iataNumber\": \"FR1117\",    \"icaoNumber\": \"RYR1117\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Ryanair Sun\",     \"iataCode\": \"RR*\"    },    \"flight\": {     \"number\": \"1117\",     \"iataNumber\": \"RR*1117\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G13\",    \"scheduledTime\": \"2019-01-15T17:25:00.000\",    \"estimatedTime\": \"2019-01-15T17:25:00.000\",    \"estimatedRunway\": \"2019-01-15T17:51:00.000\",    \"actualRunway\": \"2019-01-15T17:51:00.000\"   },   \"arrival\": {    \"iataCode\": \"BFS\",    \"icaoCode\": \"EGAA\",    \"scheduledTime\": \"2019-01-15T19:25:00.000\",    \"estimatedTime\": \"2019-01-15T19:25:00.000\"   },   \"airline\": {    \"name\": \"Ryanair Sun\",    \"iataCode\": \"RR*\"   },   \"flight\": {    \"number\": \"1117\",    \"iataNumber\": \"RR*1117\"   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"010\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T17:20:00.000\",    \"estimatedTime\": \"2019-01-15T17:45:00.000\",    \"estimatedRunway\": \"2019-01-15T17:59:00.000\",    \"actualRunway\": \"2019-01-15T17:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"K6\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:00:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"5385\",    \"iataNumber\": \"LO5385\",    \"icaoNumber\": \"LOT5385\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1625\",     \"iataNumber\": \"LH1625\",     \"icaoNumber\": \"DLH1625\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"010\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T17:20:00.000\",    \"estimatedTime\": \"2019-01-15T17:45:00.000\",    \"estimatedRunway\": \"2019-01-15T17:59:00.000\",    \"actualRunway\": \"2019-01-15T17:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"K6\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:00:00.000\"   },   \"airline\": {    \"name\": \"SWISS\",    \"iataCode\": \"LX\",    \"icaoCode\": \"SWR\"   },   \"flight\": {    \"number\": \"3807\",    \"iataNumber\": \"LX3807\",    \"icaoNumber\": \"SWR3807\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1625\",     \"iataNumber\": \"LH1625\",     \"icaoNumber\": \"DLH1625\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"010\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T17:20:00.000\",    \"estimatedTime\": \"2019-01-15T17:45:00.000\",    \"estimatedRunway\": \"2019-01-15T17:59:00.000\",    \"actualRunway\": \"2019-01-15T17:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"K6\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:00:00.000\"   },   \"airline\": {    \"name\": \"ANA\",    \"iataCode\": \"NH\",    \"icaoCode\": \"ANA\"   },   \"flight\": {    \"number\": \"6072\",    \"iataNumber\": \"NH6072\",    \"icaoNumber\": \"ANA6072\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1625\",     \"iataNumber\": \"LH1625\",     \"icaoNumber\": \"DLH1625\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"010\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T17:20:00.000\",    \"estimatedTime\": \"2019-01-15T17:45:00.000\",    \"estimatedRunway\": \"2019-01-15T17:59:00.000\",    \"actualRunway\": \"2019-01-15T17:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"K6\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:00:00.000\"   },   \"airline\": {    \"name\": \"Brussels Airlines\",    \"iataCode\": \"SN\",    \"icaoCode\": \"BEL\"   },   \"flight\": {    \"number\": \"7136\",    \"iataNumber\": \"SN7136\",    \"icaoNumber\": \"BEL7136\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1625\",     \"iataNumber\": \"LH1625\",     \"icaoNumber\": \"DLH1625\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"active\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"010\",    \"delay\": 25,    \"scheduledTime\": \"2019-01-15T17:20:00.000\",    \"estimatedTime\": \"2019-01-15T17:45:00.000\",    \"estimatedRunway\": \"2019-01-15T17:59:00.000\",    \"actualRunway\": \"2019-01-15T17:59:00.000\"   },   \"arrival\": {    \"iataCode\": \"MUC\",    \"icaoCode\": \"EDDM\",    \"terminal\": \"2\",    \"gate\": \"K6\",    \"delay\": 20,    \"scheduledTime\": \"2019-01-15T18:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:00:00.000\"   },   \"airline\": {    \"name\": \"Lufthansa\",    \"iataCode\": \"LH\",    \"icaoCode\": \"DLH\"   },   \"flight\": {    \"number\": \"1625\",    \"iataNumber\": \"LH1625\",    \"icaoNumber\": \"DLH1625\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G5\",    \"scheduledTime\": \"2019-01-15T18:00:00.000\"   },   \"arrival\": {    \"iataCode\": \"GDN\",    \"icaoCode\": \"EPGD\",    \"scheduledTime\": \"2019-01-15T19:20:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"3502\",    \"iataNumber\": \"LO3502\",    \"icaoNumber\": \"LOT3502\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"G7\",    \"delay\": 10,    \"scheduledTime\": \"2019-01-15T18:05:00.000\",    \"estimatedTime\": \"2019-01-15T18:15:00.000\",    \"estimatedRunway\": \"2019-01-15T18:15:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"3\",    \"scheduledTime\": \"2019-01-15T18:55:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"3924\",    \"iataNumber\": \"LO3924\",    \"icaoNumber\": \"LOT3924\"   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T18:15:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A36\",    \"scheduledTime\": \"2019-01-15T19:55:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"5501\",    \"iataNumber\": \"LO5501\",    \"icaoNumber\": \"LOT5501\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1369\",     \"iataNumber\": \"LH1369\",     \"icaoNumber\": \"DLH1369\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T18:15:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A36\",    \"scheduledTime\": \"2019-01-15T19:55:00.000\"   },   \"airline\": {    \"name\": \"Brussels Airlines\",    \"iataCode\": \"SN\",    \"icaoCode\": \"BEL\"   },   \"flight\": {    \"number\": \"7120\",    \"iataNumber\": \"SN7120\",    \"icaoNumber\": \"BEL7120\"   },   \"codeshared\": {    \"airline\": {     \"name\": \"Lufthansa\",     \"iataCode\": \"LH\",     \"icaoCode\": \"DLH\"    },    \"flight\": {     \"number\": \"1369\",     \"iataNumber\": \"LH1369\",     \"icaoNumber\": \"DLH1369\"    }   }  },  {   \"type\": \"departure\",   \"status\": \"cancelled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"gate\": \"011\",    \"scheduledTime\": \"2019-01-15T18:15:00.000\"   },   \"arrival\": {    \"iataCode\": \"FRA\",    \"icaoCode\": \"EDDF\",    \"terminal\": \"1\",    \"gate\": \"A36\",    \"scheduledTime\": \"2019-01-15T19:55:00.000\"   },   \"airline\": {    \"name\": \"Lufthansa\",    \"iataCode\": \"LH\",    \"icaoCode\": \"DLH\"   },   \"flight\": {    \"number\": \"1369\",    \"iataNumber\": \"LH1369\",    \"icaoNumber\": \"DLH1369\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T18:50:00.000\",    \"estimatedTime\": \"2019-01-15T18:50:00.000\"   },   \"arrival\": {    \"iataCode\": \"NAP\",    \"icaoCode\": \"LIRN\",    \"scheduledTime\": \"2019-01-15T20:50:00.000\",    \"estimatedTime\": \"2019-01-15T20:50:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"4046\",    \"iataNumber\": \"FR4046\",    \"icaoNumber\": \"RYR4046\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T19:10:00.000\",    \"estimatedTime\": \"2019-01-15T19:10:00.000\"   },   \"arrival\": {    \"iataCode\": \"GOT\",    \"icaoCode\": \"ESGG\",    \"terminal\": \"T1\",    \"scheduledTime\": \"2019-01-15T21:05:00.000\",    \"estimatedTime\": \"2019-01-15T21:05:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"4010\",    \"iataNumber\": \"FR4010\",    \"icaoNumber\": \"RYR4010\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T19:30:00.000\",    \"estimatedTime\": \"2019-01-15T19:30:00.000\"   },   \"arrival\": {    \"iataCode\": \"LPL\",    \"icaoCode\": \"EGGP\",    \"scheduledTime\": \"2019-01-15T21:20:00.000\",    \"estimatedTime\": \"2019-01-15T21:20:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"9647\",    \"iataNumber\": \"FR9647\",    \"icaoNumber\": \"RYR9647\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T19:40:00.000\",    \"estimatedTime\": \"2019-01-15T19:40:00.000\"   },   \"arrival\": {    \"iataCode\": \"MXP\",    \"icaoCode\": \"LIMC\",    \"terminal\": \"2\",    \"baggage\": \"03\",    \"scheduledTime\": \"2019-01-15T21:30:00.000\",    \"estimatedTime\": \"2019-01-15T21:30:00.000\"   },   \"airline\": {    \"name\": \"easyJet\",    \"iataCode\": \"U2\",    \"icaoCode\": \"EZY\"   },   \"flight\": {    \"number\": \"2594\",    \"iataNumber\": \"U22594\",    \"icaoNumber\": \"EZY2594\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T21:05:00.000\"   },   \"arrival\": {    \"iataCode\": \"WAW\",    \"icaoCode\": \"EPWA\",    \"baggage\": \"4\",    \"scheduledTime\": \"2019-01-15T22:00:00.000\"   },   \"airline\": {    \"name\": \"LOT - Polish Airlines\",    \"iataCode\": \"LO\",    \"icaoCode\": \"LOT\"   },   \"flight\": {    \"number\": \"3922\",    \"iataNumber\": \"LO3922\",    \"icaoNumber\": \"LOT3922\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T21:20:00.000\",    \"estimatedTime\": \"2019-01-15T21:20:00.000\"   },   \"arrival\": {    \"iataCode\": \"EMA\",    \"icaoCode\": \"EGNX\",    \"scheduledTime\": \"2019-01-15T23:00:00.000\",    \"estimatedTime\": \"2019-01-15T23:00:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"1725\",    \"iataNumber\": \"FR1725\",    \"icaoNumber\": \"RYR1725\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T21:40:00.000\",    \"estimatedTime\": \"2019-01-15T21:40:00.000\"   },   \"arrival\": {    \"iataCode\": \"EDI\",    \"icaoCode\": \"EGPH\",    \"scheduledTime\": \"2019-01-15T23:35:00.000\",    \"estimatedTime\": \"2019-01-15T23:35:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"6625\",    \"iataNumber\": \"FR6625\",    \"icaoNumber\": \"RYR6625\"   }  },  {   \"type\": \"departure\",   \"status\": \"scheduled\",   \"departure\": {    \"iataCode\": \"KRK\",    \"icaoCode\": \"EPKK\",    \"scheduledTime\": \"2019-01-15T21:45:00.000\",    \"estimatedTime\": \"2019-01-15T21:45:00.000\"   },   \"arrival\": {    \"iataCode\": \"STN\",    \"icaoCode\": \"EGSS\",    \"terminal\": \"1\",    \"scheduledTime\": \"2019-01-15T23:10:00.000\",    \"estimatedTime\": \"2019-01-15T23:10:00.000\"   },   \"airline\": {    \"name\": \"Ryanair\",    \"iataCode\": \"FR\",    \"icaoCode\": \"RYR\"   },   \"flight\": {    \"number\": \"2437\",    \"iataNumber\": \"FR2437\",    \"icaoNumber\": \"RYR2437\"   }  } ]";
+        String json = "[\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T14:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T14:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T14:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T14:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T14:11:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DUS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"B29\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:46:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:46:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Eurowings\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"EW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EWG\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"9733\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"EW9733\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"EWG9733\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G9\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T14:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T14:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T14:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T14:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T14:59:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"CRL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EBCI\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:53:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:53:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:47:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:47:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"6729\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR6729\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR6729\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G13\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T14:56:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T14:56:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:06:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:06:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DTM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDLW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:45:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:41:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:41:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4925\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR4925\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR4925\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4925\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*4925\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G13\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T14:56:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T14:56:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:06:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:06:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DTM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDLW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:45:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:41:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:41:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4925\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*4925\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G11\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:09:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:09:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"WAW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPWA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"6\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:55:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Aeroflot\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"SU\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"AFL\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3708\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"SU3708\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"AFL3708\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3906\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO3906\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT3906\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G11\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:09:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:09:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"WAW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPWA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"6\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:55:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3906\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO3906\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT3906\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G4\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:03:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:03:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"TRN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LIMF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:37:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:37:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Blue Air\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"0B\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"BMS\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4076\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"0B4076\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"BMS4076\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"005\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"VIE\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOWW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"06\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:12:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:12:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:08:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:08:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5229\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO5229\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT5229\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Austrian\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"OS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"AUA\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"598\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"OS598\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"AUA598\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"005\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"VIE\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOWW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"06\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:12:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:12:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:08:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:08:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Austrian\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"OS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"AUA\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"598\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"OS598\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"AUA598\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G15\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:21:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:21:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T15:32:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T15:32:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LTN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EGGW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:54:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:54:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"easyJet\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"U2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EZY\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"2112\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"U22112\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"EZY2112\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 4,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:05:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"PFO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LCPH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:44:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:44:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5087\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR5087\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR5087\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5087\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*5087\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 4,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T15:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T15:59:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:05:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"PFO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LCPH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:44:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:44:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5087\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*5087\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:35:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:37:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:37:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"AMS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EHAM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"C6\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"11\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:22:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:22:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Air France\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"AF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"AFR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"8288\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"AF8288\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"AFR8288\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"KLM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"KLM\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1996\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"KL1996\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"KLM1996\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T16:35:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:37:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:37:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"AMS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EHAM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"C6\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"11\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:22:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:22:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"KLM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"KLM\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1996\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"KL1996\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"KLM1996\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G14\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 57,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:35:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:32:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:32:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:40:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DUB\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EIDW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 58,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:38:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:38:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR1902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR1902\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*1902\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G14\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 57,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T15:35:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T16:32:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T16:32:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T16:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T16:40:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DUB\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EIDW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 58,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:38:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:38:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*1902\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G9\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:24:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:24:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"TSF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LIPH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:46:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:46:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3850\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR3850\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR3850\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3850\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*3850\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G9\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:24:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:24:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"TSF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LIPH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:46:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:46:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3850\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*3850\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"010\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MUC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"K21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5385\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO5385\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT5385\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1625\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"010\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MUC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"K21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"SWISS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LX\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"SWR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3807\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LX3807\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"SWR3807\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1625\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"010\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MUC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"K21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"ANA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"NH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"ANA\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"6072\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"NH6072\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"ANA6072\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1625\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"010\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MUC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"K21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Brussels Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"SN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"BEL\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"7136\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"SN7136\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"BEL7136\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1625\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"010\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T17:11:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MUC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDM\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"K21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:29:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:23:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:23:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1625\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1625\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:43:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:43:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MAN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EGCC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"3\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:20:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"2142\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR2142\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR2142\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"2142\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*2142\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T17:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T17:43:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T17:43:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"MAN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EGCC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"3\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:20:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:20:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"2142\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*2142\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G3\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 10,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T17:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:00:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:13:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:13:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LPA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"GCLP\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"21\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 3,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:28:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4505\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR4505\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR4505\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"cancelled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:00:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"GDN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPGD\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:20:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3502\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO3502\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT3502\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"011\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:26:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:26:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FRA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:49:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"5501\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO5501\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT5501\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa CityLine\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"CL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"CLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"CL1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"CLH1369\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"011\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:26:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:26:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FRA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:49:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Brussels Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"SN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"BEL\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"7120\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"SN7120\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"BEL7120\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa CityLine\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"CL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"CLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"CL1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"CLH1369\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"011\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:26:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:26:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FRA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:49:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LH\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"DLH\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LH1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"DLH1369\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa CityLine\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"CL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"CLH\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"CL1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"CLH1369\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"011\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:17:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:26:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:26:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FRA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EDDF\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:49:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:49:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Lufthansa CityLine\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"CL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"CLH\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"CL1369\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"CLH1369\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"landed\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G7\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 23,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:28:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T18:28:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T18:39:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T18:39:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"WAW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPWA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"5\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 30,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:12:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:12:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3924\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO3924\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT3924\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G13\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T18:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T18:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:09:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:09:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"ALC\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LEAL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"N\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"10A\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:05:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"9872\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR9872\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR9872\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KBP\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"UKBB\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"D\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T21:27:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"6640\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR6640\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR6640\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"6640\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*6640\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G18\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:18:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:18:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KBP\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"UKBB\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"D\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T21:27:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"6640\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*6640\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G7\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:45:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:27:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:27:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:39:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:39:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"HEL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EFHK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"22\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:28:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Finnair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"AY\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"FIN\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"AY1164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"FIN1164\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Nordic Regional Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"N7\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"FCM\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"N71164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"FCM1164\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"active\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G7\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T19:45:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T19:27:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualTime\": \"2019-01-16T19:27:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T19:39:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"actualRunway\": \"2019-01-16T19:39:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"HEL\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EFHK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"2\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"22\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:40:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:28:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Nordic Regional Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"N7\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"FCM\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"N71164\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"FCM1164\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G15\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:30:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T20:30:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"BHX\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EGBB\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"delay\": 1,\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:11:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"1466\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR1466\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR1466\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"gate\": \"G1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T20:55:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T20:55:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"ARN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"ESSA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"5\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:50:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:45:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Norwegian Air Shuttle\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"DY\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"NAX\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"4902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"DY4902\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"NAX4902\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:05:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedRunway\": \"2019-01-16T21:20:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"WAW\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPWA\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"baggage\": \"5\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:00:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"LOT - Polish Airlines\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"LO\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"LOT\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"3922\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"LO3922\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"LOT3922\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T21:15:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"GDN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPGD\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:25:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"7151\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR7151\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR7151\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"codeshared\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"7151\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*7151\"\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:15:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T21:15:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"GDN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPGD\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T22:25:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T22:25:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair Sun\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"RR*\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"7151\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"RR*7151\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "{\n" +
+                "\n" +
+                "\n" +
+                "\"type\": \"departure\",\n" +
+                "\n" +
+                "\n" +
+                "\"status\": \"scheduled\",\n" +
+                "\n" +
+                "\n" +
+                "\"departure\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"KRK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EPKK\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T21:45:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T21:45:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"arrival\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"STN\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"EGSS\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"terminal\": \"1\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"scheduledTime\": \"2019-01-16T23:10:00.000\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"estimatedTime\": \"2019-01-16T23:10:00.000\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"airline\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"name\": \"Ryanair\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataCode\": \"FR\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoCode\": \"RYR\"\n" +
+                "\n" +
+                "\n" +
+                "},\n" +
+                "\n" +
+                "\n" +
+                "\"flight\": {\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"number\": \"2437\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"iataNumber\": \"FR2437\",\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\"icaoNumber\": \"RYR2437\"\n" +
+                "\n" +
+                "\n" +
+                "}\n" +
+                "\n" +
+                "}\n" +
+                "]";
 
 
         ArrayList<Departure> departures = new ArrayList<Departure>();
@@ -27,27 +5696,34 @@ public class DepartureActivity extends AppCompatActivity {
             //Whole JSON response is under in rootArrat object
             JSONArray rootArray = new JSONArray(json);
 
-            for (int i = 0; i < 20; i++) {
+            for (int i = 0; i < rootArray.length(); i++) {
                 JSONObject singleEvent = rootArray.getJSONObject(i);
                 //departureToAdd will be filled using setters and then added to ArrayList departures
                 Departure departureToAdd = new Departure();
-                departureToAdd.setEventStatus(singleEvent.getString("status"));
 
-                JSONObject departurelOfSingleEvent = singleEvent.getJSONObject("departure");
-                //departureToAdd.setScheduledTime(departurelOfSingleEvent.getString("scheduledTime"));
-                //departureToAdd.setEstimatedTime(departurelOfSingleEvent.getString("estimatedTime"));
+                if (!"landed".equals(singleEvent.getString("status"))) {
+                    departureToAdd.setEventStatus(singleEvent.getString("status"));
+                    JSONObject departureOfSingleEvent = singleEvent.getJSONObject("departure");
+                    departureToAdd.setScheduledTime(departureOfSingleEvent.getString("scheduledTime"));
 
-                JSONObject arrivalOfSingleEvent = singleEvent.getJSONObject("arrival");
-                departureToAdd.setArrivalCode(arrivalOfSingleEvent.getString("iataCode"));
+                    try {
+                        departureToAdd.setDelayInMinutes(departureOfSingleEvent.getInt("delay"));
+                    } catch (JSONException e) {
+                        departureToAdd.setDelayInMinutes(0);
+                    }
 
-                JSONObject airlineOfSingleEvent = singleEvent.getJSONObject("airline");
-                departureToAdd.setAirlineName(airlineOfSingleEvent.getString("name"));
+                    JSONObject arrivalOfSingleEvent = singleEvent.getJSONObject("arrival");
+                    departureToAdd.setArrivalCode(arrivalOfSingleEvent.getString("iataCode"));
 
-                JSONObject flightOfSingleEvent = singleEvent.getJSONObject("flight");
-                departureToAdd.setFlightNumber(flightOfSingleEvent.getString("number"));
-                departures.add(departureToAdd);
+                    JSONObject airlineOfSingleEvent = singleEvent.getJSONObject("airline");
+                    departureToAdd.setAirlineName(airlineOfSingleEvent.getString("name"));
+
+                    JSONObject flightOfSingleEvent = singleEvent.getJSONObject("flight");
+                    departureToAdd.setFlightNumber(flightOfSingleEvent.getString("number"));
+
+                    departures.add(departureToAdd);
+                }
             }
-            //departures.add(new Departure("20:00", "20:10", "Ryanair", "KRK", "0033", singleEvent.getString("status")));
         } catch (JSONException e) {
             e.printStackTrace();
         }
