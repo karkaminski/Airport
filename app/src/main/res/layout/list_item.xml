@@ -1,50 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="70dp"
     android:padding="5dp">
 
-    <TextView
-        android:id="@+id/scheduled_time"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="18:25"
-        android:padding="5dp"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/estimated_time"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="18:33"
-        android:padding="5dp"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/airline_name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="RYANAIR"
-        android:padding="5dp"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/arrival_code"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="NAP"
-        android:padding="5dp"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/flight_number"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="FR4045"
-        android:padding="5dp"
-        android:gravity="center"/>
-    <TextView
-        android:id="@+id/event_status"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Landed"
-        android:padding="5dp"
-        android:gravity="center"/>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/event_status"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="active"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="end"/>
+
+        <TextView
+            android:id="@+id/flight_number"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="0044"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/event_status"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/arrival_code"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="KRK"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/flight_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/airline_name"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Ryianair"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrival_code"
+            app:layout_constraintStart_toEndOf="@+id/estimated_time"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/estimated_time"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scheduled_time"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/scheduled_date"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:text="2019/01/17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/scheduled_time"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:text="12:50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_date"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>

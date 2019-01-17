@@ -32,26 +32,40 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
         Departure currentDeparture = getItem(position);
 
         TextView scheduledTime = (TextView) listItemView.findViewById(R.id.scheduled_time);
+        TextView scheduledDate = (TextView) listItemView.findViewById(R.id.scheduled_date);
         TextView estimatedTime = (TextView) listItemView.findViewById(R.id.estimated_time);
         TextView airlineName = (TextView) listItemView.findViewById(R.id.airline_name);
         TextView arrivalCode = (TextView) listItemView.findViewById(R.id.arrival_code);
         TextView flightNumber = (TextView) listItemView.findViewById(R.id.flight_number);
         TextView eventStatus = (TextView) listItemView.findViewById(R.id.event_status);
 
-        scheduledTime.setText(formatDate(currentDeparture.getScheduledTime()));
+        scheduledTime.setText(formatTime(currentDeparture.getScheduledTime()));
+        scheduledDate.setText(formatDate(currentDeparture.getScheduledTime()));
 
         estimatedTime.setText(String.valueOf(currentDeparture.getDelayInMinutes()));
         airlineName.setText(currentDeparture.getAirlineName());
         arrivalCode.setText(currentDeparture.getArrivalCode());
         flightNumber.setText(currentDeparture.getFlightNumber());
         eventStatus.setText(currentDeparture.getEventStatus());
-
-
         return listItemView;
     }
-    private String formatDate (String dateJson){
+
+    private String formatTime (String dateJson){
         SimpleDateFormat inputTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
         SimpleDateFormat outputTime = new SimpleDateFormat("HH:mm");
+        try {
+            Date formattedDate = inputTime.parse(dateJson);
+            String outputDate = outputTime.format(formattedDate);
+            return outputDate;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return "exception";
+        }
+    }
+
+    private String formatDate (String dateJson){
+        SimpleDateFormat inputTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+        SimpleDateFormat outputTime = new SimpleDateFormat("yyyy/MM/dd");
         try {
             Date formattedDate = inputTime.parse(dateJson);
             String outputDate = outputTime.format(formattedDate);
