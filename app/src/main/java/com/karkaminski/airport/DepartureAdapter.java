@@ -1,6 +1,8 @@
 package com.karkaminski.airport;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +35,12 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
 
         TextView scheduledTime = (TextView) listItemView.findViewById(R.id.scheduled_time);
         TextView scheduledDate = (TextView) listItemView.findViewById(R.id.scheduled_date);
+
         TextView estimatedTime = (TextView) listItemView.findViewById(R.id.estimated_time);
+        GradientDrawable delayBackground = (GradientDrawable) estimatedTime.getBackground();
+        delayBackground.setColor(getDelayColor(currentDeparture.getDelayInMinutes()));
+
+
         TextView airlineName = (TextView) listItemView.findViewById(R.id.airline_name);
         TextView arrivalCode = (TextView) listItemView.findViewById(R.id.arrival_code);
         TextView flightNumber = (TextView) listItemView.findViewById(R.id.flight_number);
@@ -47,10 +54,12 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
         arrivalCode.setText(currentDeparture.getArrivalCode());
         flightNumber.setText(currentDeparture.getFlightNumber());
         eventStatus.setText(currentDeparture.getEventStatus());
+
+
         return listItemView;
     }
 
-    private String formatTime (String dateJson){
+    private String formatTime(String dateJson) {
         SimpleDateFormat inputTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
         SimpleDateFormat outputTime = new SimpleDateFormat("HH:mm");
         try {
@@ -63,7 +72,7 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
         }
     }
 
-    private String formatDate (String dateJson){
+    private String formatDate(String dateJson) {
         SimpleDateFormat inputTime = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
         SimpleDateFormat outputTime = new SimpleDateFormat("yyyy/MM/dd");
         try {
@@ -74,5 +83,19 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
             e.printStackTrace();
             return "exception";
         }
+    }
+
+    private int getDelayColor(int delay) {
+        int color = 0;
+        if (delay == 0) {
+            color = R.color.delay0;
+        } else if (delay <= 15) {
+            color = R.color.delay15;
+        } else if (delay > 15 && delay <= 30) {
+            color = R.color.delay30;
+        } else if (delay > 30) {
+            color = R.color.delay45;
+        }
+        return ContextCompat.getColor(getContext(), color);
     }
 }

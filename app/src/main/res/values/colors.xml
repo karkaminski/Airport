@@ -3,4 +3,15 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <!-- Colors for delay background -->
+    <!-- no delay -->
+    <color name="delay0">#20ac00</color>
+    <!-- delay <15 min -->
+    <color name="delay15">#dade00</color>
+    <!-- delay >15 min && <30 min -->
+    <color name="delay30">#d79300</color>
+    <!-- delay >30 min -->
+    <color name="delay45">#d10000</color>
 </resources>
