@@ -1,28 +1,28 @@
 package com.karkaminski.airport;
 
-public class Departure {
+public class Event {
 
     private String scheduledTime;
     private int delayInMinutes;
     private String airlineName;
-    private String arrivalCode; //iataCode
+    private String cityCode; //iataCode
     private String flightNumber; //iataNumber
     private String eventStatus;
 
 
-    public Departure(String scheduledTime, int delayInMinutes, String airlineName, String arrivalCove, String flightNumber, String eventStatus) {
+    public Event(String scheduledTime, int delayInMinutes, String airlineName, String arrivalCove, String flightNumber, String eventStatus) {
         this.scheduledTime = scheduledTime;
         this.delayInMinutes = delayInMinutes;
         this.airlineName = airlineName;
-        this.arrivalCode = arrivalCove;
+        this.cityCode = arrivalCove;
         this.flightNumber = flightNumber;
         this.eventStatus = eventStatus;
     }
-    public Departure(){
+    public Event(){
         this.scheduledTime = "empty";
         this.delayInMinutes = 0;
         this.airlineName = "empty";
-        this.arrivalCode = "empty";
+        this.cityCode = "empty";
         this.flightNumber = "empty";
         this.eventStatus = "empty";
     }
@@ -51,12 +51,12 @@ public class Departure {
         this.airlineName = airlineName;
     }
 
-    public String getArrivalCode() {
-        return arrivalCode;
+    public String getCityCode() {
+        return cityCode;
     }
 
-    public void setArrivalCode(String arrivalCode) {
-        this.arrivalCode = arrivalCode;
+    public void setCityCode(String cityCode) {
+        this.cityCode = cityCode;
     }
 
     public String getFlightNumber() {

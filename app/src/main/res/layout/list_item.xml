@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/arrival_code"
+            android:id="@+id/city_code"
             android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -62,7 +62,7 @@
             android:layout_marginBottom="8dp"
             android:text="Ryianair"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/arrival_code"
+            app:layout_constraintEnd_toStartOf="@+id/city_code"
             app:layout_constraintStart_toEndOf="@+id/estimated_time"
             app:layout_constraintTop_toTopOf="parent"
             android:gravity="center"/>

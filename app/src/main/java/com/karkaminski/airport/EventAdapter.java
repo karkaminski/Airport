@@ -14,11 +14,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class DepartureAdapter extends ArrayAdapter<Departure> {
+public class EventAdapter extends ArrayAdapter<Event> {
 
 
-    public DepartureAdapter(Context context, ArrayList<Departure> departures) {
-        super(context, 0, departures);
+    public EventAdapter(Context context, ArrayList<Event> events) {
+        super(context, 0, events);
     }
 
     @Override
@@ -31,29 +31,29 @@ public class DepartureAdapter extends ArrayAdapter<Departure> {
                     R.layout.list_item, parent, false);
         }
 
-        Departure currentDeparture = getItem(position);
+        Event currentEvent = getItem(position);
 
         TextView scheduledTime = (TextView) listItemView.findViewById(R.id.scheduled_time);
         TextView scheduledDate = (TextView) listItemView.findViewById(R.id.scheduled_date);
 
         TextView estimatedTime = (TextView) listItemView.findViewById(R.id.estimated_time);
         GradientDrawable delayBackground = (GradientDrawable) estimatedTime.getBackground();
-        delayBackground.setColor(getDelayColor(currentDeparture.getDelayInMinutes()));
+        delayBackground.setColor(getDelayColor(currentEvent.getDelayInMinutes()));
 
 
         TextView airlineName = (TextView) listItemView.findViewById(R.id.airline_name);
-        TextView arrivalCode = (TextView) listItemView.findViewById(R.id.arrival_code);
+        TextView arrivalCode = (TextView) listItemView.findViewById(R.id.city_code);
         TextView flightNumber = (TextView) listItemView.findViewById(R.id.flight_number);
         TextView eventStatus = (TextView) listItemView.findViewById(R.id.event_status);
 
-        scheduledTime.setText(formatTime(currentDeparture.getScheduledTime()));
-        scheduledDate.setText(formatDate(currentDeparture.getScheduledTime()));
+        scheduledTime.setText(formatTime(currentEvent.getScheduledTime()));
+        scheduledDate.setText(formatDate(currentEvent.getScheduledTime()));
 
-        estimatedTime.setText(String.valueOf(currentDeparture.getDelayInMinutes()));
-        airlineName.setText(currentDeparture.getAirlineName());
-        arrivalCode.setText(currentDeparture.getArrivalCode());
-        flightNumber.setText(currentDeparture.getFlightNumber());
-        eventStatus.setText(currentDeparture.getEventStatus());
+        estimatedTime.setText(String.valueOf(currentEvent.getDelayInMinutes()));
+        airlineName.setText(currentEvent.getAirlineName());
+        arrivalCode.setText(currentEvent.getCityCode());
+        flightNumber.setText(currentEvent.getFlightNumber());
+        eventStatus.setText(currentEvent.getEventStatus());
 
 
         return listItemView;
