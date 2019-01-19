@@ -1,6 +1,7 @@
 package com.karkaminski.airport;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,10 +9,10 @@ import android.widget.Button;
 
 public class AirportMainActivity extends AppCompatActivity {
 
-    Button btnDepartures;
-    Button btnArrivals;
+    ConstraintLayout btnDeparturesCL;
+    ConstraintLayout btnArrivalsCL;
 
-    //TODO: Główne aktivity ma składać się z dwóch duzych przycisków zrobionych z jakiegoś view, z grafikami lądującego i startującego samolotu
+    //TODO: sensowne zachowanie po obróceniu telefonu.
     //TODO: Przerobić DeparturesActivity i ArrivalsActivity na Fragments
     //TODO: Dodać do DeparturesActivity i ArrivalsActivity menu pod którycm będzie Refresh
     //TODO: Zrobić dynamicze pobieranie danych JSON z http
@@ -22,10 +23,11 @@ public class AirportMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_airport_main);
 
-        btnDepartures = (Button) findViewById(R.id.departures_button);
-        btnArrivals = (Button) findViewById(R.id.arrivals_button);
+        btnDeparturesCL = (ConstraintLayout) findViewById(R.id.departures_button_view);
+        btnArrivalsCL = (ConstraintLayout) findViewById(R.id.arrivals_button_view);
 
-        btnDepartures.setOnClickListener(new View.OnClickListener() {
+
+        btnDeparturesCL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), DeparturesActivity.class);
@@ -33,9 +35,9 @@ public class AirportMainActivity extends AppCompatActivity {
             }
         });
 
-        btnArrivals.setOnClickListener(new View.OnClickListener() {
+        btnArrivalsCL.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), ArrivalsActivity.class);
                 startActivity(intent);
             }
