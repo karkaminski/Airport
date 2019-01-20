@@ -2,7 +2,11 @@ package com.karkaminski.airport;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -5681,6 +5685,33 @@ public class DeparturesActivity extends AppCompatActivity {
             "\n" +
             "}\n" +
             "]";
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.single, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+                //TODO: Implement REFRESH method
+                refreshEvents();
+                return true;
+            default:
+                //Option not recognized. Let superclass to handle it.
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void refreshEvents (){
+        Toast toast = Toast.makeText(this,"REFRESH\nDon't forget to implement ME! :)", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL,0,0);
+        toast.show();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
