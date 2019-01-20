@@ -16,7 +16,6 @@ public class AirportMainActivity extends AppCompatActivity {
     ConstraintLayout btnTransportCL;
     WebView weatherWebView;
 
-    //TODO: Prezentacja pogody w Balicach
     //TODO: Zaktualizować klucz do OpenWeatherMap!
     //TODO: sensowne zachowanie po obróceniu telefonu.
     //TODO: Działanie na różnych ekranach
@@ -24,7 +23,6 @@ public class AirportMainActivity extends AppCompatActivity {
     //TODO: Zrobić dynamicze pobieranie danych JSON z http
     //TODO: Zaimplementować działanie przycisku Refresh
     //TODO: co ma się dziać po kliknięciu danego lotu?
-    //TODO: jakie jeszcze funkcje może mieć aplikacja? Wkazywanie na mapie lokalizacji lotniska. Pogoda na lotnisku. Informacje o transporcie - żywcem wyjęte z oficjalnej aplikacji - naucze sie formatować duze teksty
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
