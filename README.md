@@ -1,1 +1,6 @@
-[![Build Status](https://travis-ci.org/karkaminski/Airport.svg?branch=master)](https://travis-ci.org/karkaminski/Airport)
+![icon](/app/src/main/res/mipmap-mdpi/ic_launcher_round.png) 
+Airport
+-------------
+Rozkład lotów dla lotniska Kraków-Balice. Wykorzystuje API serwisu Aviation-Edge.
+
+[under construction;)]
